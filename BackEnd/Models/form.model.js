@@ -4,6 +4,7 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const formSchemas = new Schema({
+    fid: String,
     fullName: String,
     branch: String,
     semester: String,
@@ -11,7 +12,7 @@ const formSchemas = new Schema({
     phone: String,
     date: String,
     eventName: String,
-    note: String,
+    eventID: String,
 })
 
 export default mongoose.model("form", formSchemas)

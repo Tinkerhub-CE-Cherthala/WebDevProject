@@ -6,6 +6,7 @@ import mongoose from "mongoose"
 import cors from "cors"
 
 import formSchemas from './Models/form.model.js'
+import cookieParser from "cookie-parser"
 
 
 // App config
@@ -17,6 +18,14 @@ const port = process.env.PORT||5000
 
 app.use(express.json())
 app.use(cors())
+app.use(cookieParser())
+
+//Google Auth
+
+const {OAuth2Client} = require('google-auth-library')
+CLIENT_ID = ''//paste client id here
+const client = new OAuth2Client(CLIENT_ID)
+
 
 //DB config
 
@@ -53,6 +62,64 @@ app.get('/add',(req,res)=>{
         }
     })
 })
+
+
+app.post('/login',(req,res)=>{
+    token = req.body.token
+    console.log(token)
+    async function verify() {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+            // Or, if multiple clients access the backend:
+            //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
+        })
+        const payload = ticket.getPayload()
+        const userid = payload['sub']
+        // If request specified a G Suite domain:
+        // const domain = payload['hd'];
+      }
+      verify()
+      .then(()=>{
+          res.cookie('session-token', token)
+          res.send('success')
+      })
+      .catch(console.error)
+})
+
+app.get('/profile',checkAuthenticated,(req,res)=>{
+    user = req.user
+    res.render('',{user}) //add the profile page
+})
+
+app.get('/logout',(req,res)=>{
+    res.clearCookie('session-token')
+    res.redirect('/')  //add the redirect url here
+})
+
+function checkAuthenticated(req,res,next){
+    token = req.cookies('session-token')
+    user = {}
+    async function verify(){
+        const ticket = await client.verifyIdToken({
+            idToken:token,
+            audience: CLIENT_ID
+        })
+        const payload = ticket.getPayload()
+        user.name = payload.name
+        user.email = payload.email
+        user.picture = payload.picture
+    }
+    verify()
+    .then(()=>{
+        req.user = user
+        next()
+    })
+    .catch(err=>{
+        res.redirect('/login') //redirect routine
+    })
+}
+
 
 //Listeners
 
