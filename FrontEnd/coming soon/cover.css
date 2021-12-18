@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Goldleaf';
+  src: url(/font/Goldleaf.ttf);
+}
+@font-face {
+  font-family: 'Musticapro';
+  src: url(/font/Musticapro.otf);
+}
+@font-face {
+  font-family: 'CapoonBold';
+  src: url(/font/CapoonBold.ttf);
+}
+body{
+    margin: 0;
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .st0 {
+    fill: none;
+    stroke: #1e3e92;
+    stroke-miterlimit: 10;
+  }
+  .st1 {
+    fill: none;
+    stroke: #0348f7;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+
+  .hide{
+    display:none;
+  }
+  .show{
+    display:block;
+    position:absolute;
+    /* left: 200px;
+    top: 200px; */
+    background-color: #000333;
+  } 
+  #my_div{
+    opacity: 0.7;
+  } 
+
+#lines{
+  position: absolute;
+}  
+  
+#lines polyline{
+  stroke-dasharray: 5px;
+  stroke-dashoffset: 300px;
+  animation: line-anim 30s ease forwards 0s;
+}
+
+#lines path{
+  stroke-dasharray: 5px;
+  stroke-dashoffset: 300px;
+  animation: line-anim 40s ease backwards 0s;
+}
+
+#lines line{
+  stroke-dasharray: 5px;
+  stroke-dashoffset: 300px;
+  animation: line-anim 60s ease forwards 0s;
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+/* @media only screen and (max-width: 600px) {
+
+} */
+.name{
+  color: white;
+  
+  padding-left: 21vmax;
+  padding-top: 1vmax;
+  margin: 0px;
+  text-align: center;
+  justify-content: center;
+}
+h1{
+  display: flex;
+  margin: 0px;
+  font-family: 'Musticapro';
+  font-size: 3vmax;
+}
+.tag{
+  display: flex;
+  font-size: 1vmax;
+  margin: 0px;
+  padding: 0vmax 2vmax 0vmax 2vmax;
+  font-family: 'Musticapro';
+}
+
+img{
+  display: inline-flex;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  margin: 0%;
+  align-items: center;
+  justify-content: center;
+  padding: 4vmax 30vmax 0vmax 15vmax;
+}
+.coming{
+  display: flex;
+  color: white;
+  /* position: relative; */
+  margin: 0px;
+  /* padding: 0px; */
+  font-size: 4vmax;
+  padding-top: 10vmax;
+  justify-content: center;
+  text-align: center;
+  font-family: 'CapoonBold';
+}
+.connect{
+  /* position: relative; */
+  display: flex;
+  color: white;
+  padding-left: 3vmax;
+  font-size: 1vmax;
+  margin: 0px;
+  padding-top: 11vmax;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Musticapro';
+  font-weight: 0.5px;
+}
+
+.overlay{
+  z-index: 9;
+  position:absolute;
+  display: grid;
+  grid-template-rows: 20% 20% 40% 15% 20%;
+  margin: 10vmax 20vmax 0vmax 20vmax;
+  justify-content:center;
+  text-align: center;
+  
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    margin: 0%;
+    padding: 0%;
+  }
+  .coming{
+    display: flex;
+    font-size: 4vmax;
+    padding: 0px;
+    padding-top: 10vmax;
+    text-align: center;
+  }
+  .overlay{
+    margin: 30vmax 10vmax 0vmax 10vmax;
+    position:absolute;
+  }
+  .connect{
+    display: flex;
+    padding-left: 3vmax;
+    /* position: relative;
+    justify-content: center;
+    text-align: center; */
+    padding-top: 20vmax;
+  }
+  .name{
+    padding: 0vmax 10vmax 0vmax 15vmax;
+    align-items: center;
+    justify-content: center;
+  }
+}

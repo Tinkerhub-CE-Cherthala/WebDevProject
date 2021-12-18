@@ -1,0 +1,126 @@
+:root {
+    --bg: #dcdde1;     
+    --color-icon: #535c68;  
+    --social-icon1: white; 
+  }
+  
+  
+  
+  section {
+    /* width: 100%;
+    height: 100vh; */
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    /* background: var(--bg); */
+    /* z-index: -10; */
+    margin: 0px;
+    padding: 25vmax 20vmax 0vmax 21vmax;
+  }
+  
+  
+  .icon-list {
+    width: 100%;
+    max-width: 30rem;
+    /* padding: 0 1rem; */
+    padding: 0px 1px 0px 1px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .icon-item {
+    list-style: none
+    
+  }
+  
+  .icon-link {  
+    display: inline-flex;
+    font-size: 1rem;  
+    text-decoration: none;  
+    /* color: var(--color-icon); */
+    width: 4rem;
+    height: 4rem;   
+    transition: .5s linear;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    /* border: 2px solid blue;
+    border-radius: 50%; */
+  }
+  
+  .icon-link i:hover {
+    color: #0348f7;
+  }
+  
+  .icon-link i {
+    margin: auto;    
+  }
+  
+  .icon-link::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    height: 4rem;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+  }
+    
+  .icon-link:hover::before {  
+    transform: scale(0.8);
+  }
+  
+  .icon-item:nth-child(1) a:hover:before { 
+    background: var(--social-icon1); 
+  }
+  
+  .icon-item:nth-child(2) a:hover:before { 
+    background: var(--social-icon1); 
+  }
+  
+  .icon-item:nth-child(3) a:hover:before { 
+    background: var(--social-icon1); 
+  }
+
+  .icon-item:nth-child(4) a:hover:before { 
+    background: var(--social-icon1); 
+  }
+  
+
+  .fab, .fas{
+    color: white;
+    font-size: 1.5vmax;
+    margin: 0px;
+  }
+  
+  #insta:hover{
+    color: #833AB4;
+  }
+  #yout:hover{
+    color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    
+    section{
+      /* position: relative; */
+      padding-left: 15%;
+      text-align: center;
+      justify-content: center;
+      margin: 0px;
+      
+    }
+    .icon-list{
+      display:flex;
+      max-width: 10px;
+      padding: 0%;
+      width: 100%;
+    }
+  }
