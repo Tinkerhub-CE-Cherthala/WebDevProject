@@ -1,7 +1,7 @@
 import './images';
-import './Event.css'
+import './Event.css';
 
-function App() {
+function Event() {
     return (
         <div>
             <div class="event">
