@@ -1,4 +1,4 @@
-import './Main-bg.css';
+import './Mainbg.css';
 
 window.addEventListener("scroll",function(){
     const header= document.querySelector('header');
@@ -9,26 +9,28 @@ document.querySelector('.toggle').onclick = function(){
     this.classList.toggle('active');
     navigation.classList.toggle('active');
 }
-function Event() {
+function Mainbg() {
     return (
         <header>
         <div class="main-bg"></div>
         <div class="logo">
             <img class="logo1" src="./logo thick 1.png" alt="logo" />
             <div class="logo2">
-                <a href="#">Zealous</a>
+                <a href="./Mainbg.js">Zealous</a>
                 <p>Explore the New Horizons</p>
             </div>
         </div>
-        <a class="zealous" href="#">Zealous</a>
+        <a class="zealous" href="./Mainbg.js">Zealous</a>
         <div class="toggle"></div>
         <nav>
             <ul>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./Event">Events</a></li>
+                <li><a href="./Event">About</a></li>
+                <li><a href="./Event">Contact</a></li>
             </ul>
         </nav>
     </header>
     );
 }
+export default Mainbg;
+

@@ -1,4 +1,7 @@
-import './images';
+import general from './images/general.png';
+import ece from './images/ece.png';
+import eee from './images/eee.png';
+import cse from './images/computer.png';
 import './Event.css';
 
 function Event() {
@@ -11,10 +14,10 @@ function Event() {
   <div class = "container">
     <div class = "card">
       <div class = "image">
-        <img href = "#" src = './general.png' />
+        <img href = "#" src = {general} alt='general' />
       </div>
       <div class = "content">
-        <a class="view" href="#">
+        <a class="view" href="./Event">
           <span>view</span>
           <span>view</span>
         </a>
@@ -22,10 +25,10 @@ function Event() {
     </div>
     <div class = "card">
       <div class = "image">
-        <img href = "#" src = './ece.png' />
+        <img href = "#" src = {ece} alt='ece' />
       </div>
       <div class = "content">
-        <a class="view" href="#">
+        <a class="view" href="./Event">
           <span>view</span>
           <span>view</span>
         </a>
@@ -33,10 +36,10 @@ function Event() {
     </div>
     <div class = "card">
       <div class = "image">
-        <img href = "#" src = './eee.png' />
+        <img href = "#" src = {eee} alt='eee' />
       </div>
       <div class = "content">
-        <a class="view" href="#">
+        <a class="view" href="./Event">
           <span>view</span>
           <span>view</span>
         </a>
@@ -44,10 +47,10 @@ function Event() {
     </div>  
     <div class = "card">
       <div class = "image">
-        <img href = "#" src =   './computer.png' />
+        <img href = "#" src ={cse} alt='cse' />
       </div>
       <div class = "content">
-        <a class="view" href="#">
+        <a class="view" href="./Event">
           <span>view</span>
           <span>view</span>
         </a>
@@ -58,3 +61,5 @@ function Event() {
         </div>    
     );
 }
+
+export default Event;
