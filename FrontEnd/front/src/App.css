@@ -7,6 +7,9 @@
   pointer-events: none;
 }
 
+.bwme{
+  padding-top: 580px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
