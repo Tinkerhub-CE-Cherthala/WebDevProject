@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   const { data: session, status } = useSession()
   if(status === "loading"){
-    return(<p>Loading...</p>);
+    return(<p>Loading...</p>) ;
   }
   if (status === "authenticated") {
     return(
