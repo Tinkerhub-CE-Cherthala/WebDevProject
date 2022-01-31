@@ -1,7 +1,8 @@
-
+import React from 'react';
 import './App.css';
 import Mainbg from './Mainbg';
 import Event from './Event';
+import Contact from './Contact';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <>
       <Mainbg />
       <div className='bwme'></div>
-      <Event />     
+      <Event />    
+      <Contact /> 
     </>
   );
 }

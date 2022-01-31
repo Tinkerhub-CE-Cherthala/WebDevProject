@@ -17,7 +17,7 @@ function Event() {
         <img href = "#" src = {general} alt='general' />
       </div>
       <div class = "content">
-        <a class="view" href="./Event">
+        <a class="view" href="http://127.0.0.1:5500/WebDevProject/FrontEnd/front/src/event/index.html">
           <span>view</span>
           <span>view</span>
         </a>
@@ -28,7 +28,7 @@ function Event() {
         <img href = "#" src = {ece} alt='ece' />
       </div>
       <div class = "content">
-        <a class="view" href="./Event">
+        <a class="view" href="http://127.0.0.1:5500/WebDevProject/FrontEnd/front/src/event/index.html">
           <span>view</span>
           <span>view</span>
         </a>
@@ -39,7 +39,7 @@ function Event() {
         <img href = "#" src = {eee} alt='eee' />
       </div>
       <div class = "content">
-        <a class="view" href="./Event">
+        <a class="view" href="http://127.0.0.1:5500/WebDevProject/FrontEnd/front/src/event/index.html">
           <span>view</span>
           <span>view</span>
         </a>
@@ -50,7 +50,7 @@ function Event() {
         <img href = "#" src ={cse} alt='cse' />
       </div>
       <div class = "content">
-        <a class="view" href="./Event">
+        <a class="view" href="http://127.0.0.1:5500/WebDevProject/FrontEnd/front/src/event/index.html">
           <span>view</span>
           <span>view</span>
         </a>
